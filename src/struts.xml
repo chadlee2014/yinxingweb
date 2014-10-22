@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<constant name="struts.action.extension" value="action,html"/>
+	
+	<!--与公告相关 -->
+	<package name="announcement" extends="struts-default" namespace="/">
+		<action name="loadIndex" class="com.yinxing.action.AnnouncementAction" method="loadIndexInfo">
+			<result name="success">/JSP/announcement/loadIndex.jsp</result>
+		</action>
+		
+		<action name="loadAnnouncementById" class="com.yinxing.action.AnnouncementAction" method="loadAnnouncementById">
+			<result name="success">/JSP/announcement/announcementDetail.jsp</result>
+		</action>
+		 
+		<action name="deleteAnnouncement" class="com.yinxing.action.AnnouncementAction" method="deleteAnnouncement">
+			<result name="success">/JSP/announcement/success.jsp</result>
+		</action>
+		
+		<action name="editAnnouncement" class="com.yinxing.action.AnnouncementAction" method="editAnnouncement">
+			<result name="success">/JSP/announcement/editAnnouncement.jsp</result>
+		</action>
+		
+		<action name="updateAnnouncement" class="com.yinxing.action.AnnouncementAction" method="updateAnnouncement">
+			<result name="success">/JSP/announcement/announcementDetail.jsp</result>
+		</action>
+		
+		<action name="loadMoreAnnouncement" class="com.yinxing.action.AnnouncementAction" method="loadMoreAnnouncement">
+			<result name="success">/JSP/announcement/announcementManager.jsp</result>
+		</action>
+	</package>
+
+    <!--与project相关-->
+    <package name="project" extends="struts-default" namespace="/">
+        <action name="loadProject" class="com.yinxing.action.ProjectAction" method="loadProject">
+            <result name="success">/JSP/project/loadProject.jsp</result>
+        </action>
+
+        <action name="loadProjectById" class="com.yinxing.action.ProjectAction" method="loadProjectById">
+            <result name="success">/JSP/project/projectDetail.jsp</result>
+        </action>
+
+        <action name="deleteProject" class="com.yinxing.action.ProjectAction" method="deleteProject">
+            <result name="success">/JSP/project/success.jsp</result>
+        </action>
+
+        <action name="editProject" class="com.yinxing.action.ProjectAction" method="editProject">
+            <result name="success">/JSP/project/editProject.jsp</result>
+        </action>
+
+        <action name="updateProject" class="com.yinxing.action.ProjectAction" method="updateProject">
+            <result name="success">/JSP/project/projectDetail.jsp</result>
+        </action>
+
+    </package>
+
+  
+    <!--与技术交流相关-->
+    <package name="tech" extends="struts-default" namespace="/">
+        <action name="loadTech" class="com.yinxing.action.TechAction" method="loadTech">
+            <result name="success">/JSP/tech/loadTech.jsp</result>
+        </action>
+
+        <action name="deleteTech" class="com.yinxing.action.TechAction" method="deleteTech">
+            <result name="success">/JSP/tech/success.jsp</result>
+        </action>
+
+        <action name="editTech" class="com.yinxing.action.TechAction" method="editTech">
+            <result name="success">/JSP/tech/editTech.jsp</result>
+        </action>
+
+        <action name="updateTech" class="com.yinxing.action.TechAction" method="updateTech">
+            <result name="success">/JSP/tech/techDetail.jsp</result>
+        </action>
+
+    </package>
+
+    <!--与留言板相关-->
+    <package name="messageBoard" extends="struts-default" namespace="/">
+        <action name="loadMessageBoard" class="com.yinxing.action.MessageAction" method="loadMessage">
+            <result name="success">/JSP/messageBoard/loadMessageBoard.jsp</result>
+        </action>
+        <action name="deleteMessageBoard" class="com.yinxing.action.MessageAction" method="deleteMessage">
+            <result name="success">/JSP/aboutUs/success.jsp</result>
+        </action>
+
+        <action name="editMessageBoard" class="com.yinxing.action.MessageAction" method="editMessage">
+            <result name="success">/JSP/aboutUs/editMessage.jsp</result>
+        </action>
+
+        <action name="updateMessageBoard" class="com.yinxing.action.MessageAction" method="updateMessage">
+            <result name="success">/JSP/aboutUs/messageDetail.jsp</result>
+        </action>
+
+    </package>
+	
+
+</struts>
+

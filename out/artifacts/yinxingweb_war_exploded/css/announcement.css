@@ -1,0 +1,37 @@
+#carousel {
+	height:449px;
+	width:960px;
+	position:relative;
+}
+.carousel-image {
+	border:0;
+	display:block;
+}
+.carousel-feature {
+	position:absolute;
+	top:-1000px;
+	left:-1000px;
+	cursor:pointer;
+}
+
+.announcementItem{
+	height:250px;
+	width:250px;
+	float:left;
+	
+	margin:10px 0px 20px 58px;
+}
+
+.announcementItem1{
+	height:250px;
+	width:250px;
+	float:left;
+	margin:10px 0px 20px 58px;
+}
+
+.announcement-img{
+	height:200px;
+	width:200px;
+	margin:20px;
+	
+}
